@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var myFriendsArray = ["Vien","Michael B.", "Mason"]
+    var myFavoriteCountries = ["France", "Japan", "United Kingdom"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +25,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")
-        let text = myFriendsArray[indexPath.row]
+        let text = myFavoriteCountries[indexPath.row]
         cell?.textLabel?.text = text
         return cell!
     }
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myFriendsArray.count
+        return myFavoriteCountries.count
     }
 
 }
